@@ -1,0 +1,3 @@
+docs/note one.txt 11
+docs/.secret.txt 7
+tmp/empty.txt 0
