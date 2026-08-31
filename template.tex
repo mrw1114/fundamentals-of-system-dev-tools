@@ -1,54 +1,78 @@
 \documentclass[a4paper, 12pt]{article}
 \usepackage{graphicx}
+\usepackage{float}
+\usepackage{listings}
 \usepackage[UTF8]{ctex}
+\usepackage{xcolor}
+\setlength{\parindent}{2em}
+\lstdefinestyle{mybash}{
+    language=bash,                 % 设置语言为 Bash[reference:8]
+    basicstyle=\small\ttfamily,    % 基础字体：使用等宽字体[reference:9][reference:10]
+    keywordstyle=\color{blue},     % 关键字颜色[reference:11][reference:12]
+    keywordstyle={[2]\color{cyan}},% 第二组关键字颜色[reference:13]
+    commentstyle=\itshape\color{orange!70!black}, % 注释样式：斜体 + 橙色[reference:14]
+    stringstyle=\color{teal},      % 字符串颜色[reference:15]
+    backgroundcolor=\color{yellow!10}, % 背景色：浅黄色[reference:16][reference:17]
+    frame=single,                  % 代码框样式[reference:18]
+    numbers=left,                  % 在左侧显示行号[reference:19]
+    numberstyle=\tiny\color{gray}, % 行号样式[reference:20]
+    breaklines=true,               % 自动换行
+    showstringspaces=false,        % 不显示字符串中的空格[reference:21][reference:22]
+}
 \begin{document}
-  \title{Week? 实验报告}
+  \title{Week0? 实验报告}
   \author{mrw1114}
   \date{August, 27th}
   \maketitle
   \section{个人信息}
   \begin{itemize}
-    \item 姓名：
-    \item 学号：
-    \item Github 仓库链接：
+    \item 姓名：王俊杰
+    \item 学号：25020007122
+    \item Github 仓库链接：https://github.com/mrw1114/fundamentals-of-system-dev-tools
   \end{itemize}
   \section{课上实验}
-    \subsection{第x题：xxx}
-      \begin{enumerate}
-      \item ...\\
+    \subsection{第x题：x}
+      \subsubsection{step1}
       content1
-      \item ...\\
-      content2
-      \end{enumerate}
-    \subsection{第y题：xxxx}
-      \begin{enumerate}
-      \item ...\\
+      \noindent
+      \begin{figure}[H]
+        \centering
+        \includegraphics[width=\textwidth]{image1}
+        \caption{image1}
+        \label{1-1}
+      \end{figure}
+    \subsection{第x题：x}
+      \subsubsection{step1}
       content1
-      \item ...\\
-      content2
-      \end{enumerate}
-    \subsection{第z题：xxxxx}
-      \begin{enumerate}
-      \item ...\\
+      \noindent
+      \begin{figure}[H]
+        \centering
+        \includegraphics[width=\textwidth]{image1}
+        \caption{image1}
+        \label{1-1}
+      \end{figure}
+    \subsection{第x题：x}
+      \subsubsection{step1}
       content1
-      \item ...\\
-      content2
-      \end{enumerate}
-    \subsection{第w题：xxxxxx}
-      \begin{enumerate}
-      \item ...\\
+      \noindent
+      \begin{figure}[H]
+        \centering
+        \includegraphics[width=\textwidth]{image1}
+        \caption{image1}
+        \label{1-1}
+      \end{figure}
+     \subsection{第x题：x}
+      \subsubsection{step1}
       content1
-      \item ...\\
-      content2
-      \end{enumerate}
+      \noindent
+      \begin{figure}[H]
+        \centering
+        \includegraphics[width=\textwidth]{image1}
+        \caption{image1}
+        \label{1-1}
+      \end{figure}
   \section{课后练习}
     \subsection{第x题：xxx}
-      \begin{enumerate}
-      \item ...\\
-      content1
-      \item ...\\
-      content2
-      \end{enumerate}
-  \section{commit 记录}
-  
+      \subsubsection{}
+  \section{commit 记录}  
 \end{document}
