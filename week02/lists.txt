@@ -1,0 +1,35 @@
+1. 你可能见过像 cmd --flag -- --notaflag 这样的命令。这里的 -- 是一个特殊参数，它告诉程序后面不要再继续解析选项（flag）了。也就是说，-- 后面的所有内容都会被当作位置参数（positional argument）。这有什么用？试着运行 touch -- -myfile，然后在不使用 -- 的情况下把它删掉。
+2. 阅读 man ls，写出一个 ls 命令，让它按下面的方式列出文件：
+  包含所有文件，包括隐藏文件
+  文件大小以易读格式显示（例如 454M，而不是 454279954）
+  按最近修改时间排序
+  输出带颜色
+3. 进程替换 <(command) 可以让你把一个命令的输出当成文件来用。试着配合 diff 和进程替换，比较 printenv 与 export 的输出。它们为什么不一样？（提示：可以试试 diff <(printenv | sort) <(export | sort)）
+4. 写两个 bash 函数 marco 和 polo，行为如下：每次执行 marco 时，都要以某种方式保存当前工作目录；之后无论你切到哪个目录，只要执行 polo，它都应该把你 cd 回执行 marco 时所在的目录。为了方便调试，你可以把代码写进 marco.sh，然后通过执行 source marco.sh 把这些定义重新加载到当前 shell。
+5. 假设你有一个很少失败的命令。为了调试它，你需要把它的输出保存下来，但等到一次失败运行可能会很耗时。写一个 bash 脚本，不断运行下面这个脚本直到它失败为止，并把标准输出和标准错误分别保存到文件里，最后把结果打印出来。如果你还能顺便报告它运行了多少次才失败，就加分。
+```bash
+#!/usr/bin/env bash
+
+n=$(( RANDOM % 100 ))
+
+if [[ n -eq 42 ]]; then
+   echo "Something went wrong"
+   >&2 echo "The error was using magic numbers"
+   exit 1
+fi
+
+echo "Everything went according to plan"
+```
+6. 在终端里启动一个 sleep 10000 任务，用 Ctrl-Z 把它挂起，再用 bg 让它继续在后台运行。然后使用 pgrep 找到它的 pid，再用 pkill 把它杀掉，整个过程都不要手动输入这个 pid。（提示：试试 -af 参数）
+7. 创建一个 alias dc，让你把 cd 打错时也能正常工作
+8. 写一个命令或脚本，递归找出某个目录中最近修改过的文件。更一般一点，你能不能按“最近修改时间”列出所有文件？
+9. 进入 ~/.ssh/，检查你是否已经有一对 SSH 密钥。如果没有，就用 ssh-keygen -a 100 -t ed25519 生成一对。建议给密钥设置密码，并配合 ssh-agent 使用
+10. 编辑 .ssh/config，加入下面这样的配置项：
+
+ Host vm
+     User username_goes_here
+     HostName ip_goes_here
+     IdentityFile ~/.ssh/id_ed25519
+     LocalForward 9999 localhost:8888
+11. 使用 ssh-copy-id vm 把你的 SSH 公钥复制到服务器上。
+12. 在虚拟机里执行 python -m http.server 8888 启动一个 Web 服务器。然后在你自己的机器上访问 http://localhost:9999，确认自己能访问虚拟机里的这个服务。 
