@@ -1,0 +1,9 @@
+# pyproject.toml
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "greetlab-25020007122"
+version = "0.1.1"
+[project.scripts]
+sdt-greet = "greetlab.cli:main"

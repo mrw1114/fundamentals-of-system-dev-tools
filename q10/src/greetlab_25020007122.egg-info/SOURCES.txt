@@ -1,0 +1,9 @@
+pyproject.toml
+src/greetlab/__init__.py
+src/greetlab/cli.py
+src/greetlab_25020007122.egg-info/PKG-INFO
+src/greetlab_25020007122.egg-info/SOURCES.txt
+src/greetlab_25020007122.egg-info/dependency_links.txt
+src/greetlab_25020007122.egg-info/entry_points.txt
+src/greetlab_25020007122.egg-info/top_level.txt
+test/test_cli.py

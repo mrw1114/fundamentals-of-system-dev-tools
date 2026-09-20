@@ -1,0 +1,10 @@
+1. Save your environment with printenv to a file, create a venv, activate it, printenv to another file and diff before.txt after.txt. What changed in the environment? Why does the shell prefer the venv? (Hint: look at $PATH before and after activation.) Run which deactivate and reason about what the deactivate bash function is doing.
+2. Install Docker and use it to build the Missing Semester class website locally using docker compose.
+3. Write a Dockerfile for a simple Python application. Then write a docker-compose.yml that runs your application alongside a Redis cache.
+4. Create a Python package with a pyproject.toml and install it in a virtual environment. Create a lockfile and inspect it.（创建一个带有 pyproject.toml 的 Python 包，并在虚拟环境中安装它。创建一个锁文件并检查它。）
+5.浏览一个知名项目（例如 Redis 或 curl）的源码。 找出讲义中提到的几种注释类型：有用的 TODO、指向外部文档的引用、解释为何避开某种做法的“why not”注释、或血泪教训。 如果这些注释不存在，会失去什么？
+6. 对比三个 1000+ star 的 GitHub 项目的 README。 它们都同样有用吗？ 找出哪些内容在你看来主要是噪音，为你将来写 README 提供借鉴。
+7.用 AI 编程智能体浏览一个陌生的代码库。最好在调试或为你在意的项目添加新功能的背景下进行。如果想不出合适的，可以试试用 AI 智能体理解 opencode 中安全相关功能的工作原理。
+8. 编写一个函数 make_counter()，它返回一个内部函数。每次调用该内部函数时，计数器加一并返回当前值。要求使用闭包实现，并解释为什么需要使用 nonlocal 关键字。
+9. 编写一个函数 append_to(element, target=[])，将 element 追加到 target 并返回 target。不传 target 调用两次。解释输出并用 None 作为默认值修复该函数.
+10. 给定 a = [[1, 2], [3, 4]]，创建 b = a.copy() 和 c = copy.deepcopy(a)。修改 a[0][0] = 99。打印 a、b、c。解释原因。并解释 is 和 == 的区别，用小整数和列表举例。 
