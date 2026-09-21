@@ -6,4 +6,4 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: pip install proselint
-      - run: proselint $(git ls-files '*.md')
+      - run: proselint check $(git ls-files '*.md')
