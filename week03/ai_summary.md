@@ -81,7 +81,7 @@ github 仓库，请查看仓库尝试总结 opencode 中安全相关功能的工
 
 ### Relevant Code Snippets
 1. c:\Users\27111\Documents\github_download\opencode\packages\core\src\tool\bash.ts:L61-L68
-   — Bash 工具的安全机制说明与待办：当前是 V2 core shell boundary，明确 `TODO` 引入 tree-sitter bash/PowerShell parser、命令前缀审批、解析器级危险命令检测等。
+   — Bash 工具的安全机制说明与待办：当前是 V2 core shell boundary，明确待办事项引入 tree-sitter bash/PowerShell parser、命令前缀审批、解析器级危险命令检测等。
 
 2. c:\Users\27111\Documents\github_download\opencode\packages\core\src\tool\bash.ts:L78-L94
    — Bash 工具对 shell 命令做最小 token 解析，并扫描命令参数引用的外部目录；这是执行层安全边界的一部分。
@@ -218,7 +218,7 @@ opencode 的安全模型核心是**「本机可信代理 + 细粒度权限门控
 
 ### 风险提示（客观观察）
 
-1. **bash 无命令解析**：危险命令拦截完全依赖用户配置的 pattern 规则，默认 `ask` 是唯一防线；仓库 `TODO` 明确承认这块是技术债
+1. **bash 无命令解析**：危险命令拦截完全依赖用户配置的 pattern 规则，默认 `ask` 是唯一防线；仓库代办明确承认这块是技术债
 2. **插件零隔离**：第三方插件等同任意代码执行
 3. **凭据明文落盘**：仅靠 `0o600` 文件权限，无加密
 4. **服务端默认无鉴权**：一旦 `--hostname 0.0.0.0` 暴露且未设 `OPENCODE_SERVER_PASSWORD`，即为无认证开放
