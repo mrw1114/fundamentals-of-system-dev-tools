@@ -1,0 +1,14 @@
+# pyproject.toml
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "greetlab-25020007122"
+version = "0.1.1"
+[project.scripts]
+sdt-greet = "greetlab.cli:main"
+[tool.ruff]
+line-length = 88 # 指定单行最多的字符数，约定俗成为88个字符。
+target-version = "py312" # 指定项目使用的 python 版本
+[tool.pytest.ini_options]
+testpaths = ["test"] # 指定 pytest 的默认路径
