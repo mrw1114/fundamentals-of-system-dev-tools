@@ -1,3 +1,4 @@
+#!/bin/bash
 set -x
 var=114514
 echo $var

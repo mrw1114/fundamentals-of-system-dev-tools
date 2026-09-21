@@ -5,7 +5,7 @@ if [ $# -ne 1 ]; then
     exit 1
 fi
 # 不存在文件时
-if [ ! -e $1 ]
+if [ ! -e "$1" ]
 then
   echo "$1 doesn't exist" >&2
   exit 2
