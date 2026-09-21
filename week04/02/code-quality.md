@@ -1,4 +1,3 @@
-<!-- proselint disable -->
 ---
 layout: lecture
 title: "Code Quality"
