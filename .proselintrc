@@ -1,0 +1,6 @@
+{
+  "checks": {
+    "typography.quotes": false,
+    "typography.ellipsis": false
+  }
+}
